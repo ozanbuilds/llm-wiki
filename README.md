@@ -136,18 +136,26 @@ Most note systems are passive. The LLM-Wiki pattern makes your knowledge base an
 
 ---
 
-## Optional: Power Up with Skills
+## Included: Three Claude Code Skills
 
-Out of the box the vault runs entirely on **plain-English commands** — no extra setup, which keeps the learning curve gentle. If you later want repeatable shortcuts, you can add Claude Code **skills** (slash commands) under `.claude/skills/`. Each skill is just a folder with a `SKILL.md` carrying `name` and `description` frontmatter:
+The vault runs entirely on **plain-English commands** — you never *have* to learn a syntax. It also ships three Claude Code **skills** (slash commands) under `.claude/skills/`, for when you want the shortcut:
+
+| Skill | What it does |
+|---|---|
+| `/vault-ingest` | Ingest a source, process the inbox or clippings, write the literature note, update cross-references, append to the log. |
+| `/vault-lint` | Health-check the vault: orphan pages, broken wikilinks, `index.md` coverage, missing MOCs. |
+| `/notion-sync` | *Optional.* Push tasks, projects and content-pipeline cards to Notion with `obsidian://` backlinks. Knowledge stays in the vault. |
+
+`process the inbox` and `/vault-ingest` do the same thing — use whichever you prefer.
+
+Each skill is just a folder with a `SKILL.md` carrying `name` and `description` frontmatter, so adding your own is a copy-paste away:
 
 ```markdown
 ---
-name: wiki-ingest
-description: Ingest a source into the vault — read it, write a literature note, update cross-references, append to the log.
+name: my-skill
+description: What it does, and the phrases that should trigger it.
 ---
 ```
-
-That turns `process the inbox` into `/wiki-ingest`, `lint the vault` into `/wiki-lint`, and so on. **This template ships without any skills on purpose** — plain English is friendlier to start with, and skills are a power-user layer you add once the workflows are second nature.
 
 ---
 
