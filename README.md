@@ -44,7 +44,7 @@ what are the tradeoffs between REST and GraphQL?
 ## Quick Start
 
 ```bash
-git clone https://github.com/tyrozz/llm-wiki
+git clone https://github.com/ozanbuilds/llm-wiki
 cd llm-wiki
 ```
 
